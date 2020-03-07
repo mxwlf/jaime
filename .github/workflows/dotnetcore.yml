@@ -4,16 +4,19 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
+    - name: Setup .NET Core 3
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - name: Build with dotnet
-      run: dotnet build src/solution.sln --configuration Release
+    - name: Setup .NET Core 2
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+    - name: Build
+      run: dotnet build src/solution.sln --configuration Debug
     - name: Run tests
-      run: dotnet test src/solution.sln
+      run: dotnet test src/solution.sln --configuration Debug
