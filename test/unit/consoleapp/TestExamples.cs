@@ -1,5 +1,6 @@
 using ConsoleApp;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace consoleapp.test.unit
