@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>mxwlf.net.jaime</AssemblyName>
+    <RootNamespace>mxwlf.net.Jaime</RootNamespace>
+    <TargetFrameworks>net5.0;netcoreapp3.1;netstandard2.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\grump\src\framewolf.net.extensions.hosting\framewolf.net.extensions.hosting.csproj" />
+    <ProjectReference Include="..\..\..\private-aal-onedrive-migration\src\aal-onedrive\aal-onedrive.csproj" />
+    <ProjectReference Include="..\jaime.abstractions\jaime.abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
